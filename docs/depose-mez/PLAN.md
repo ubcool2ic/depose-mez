@@ -56,7 +56,14 @@ The values in this table are standard datasheet ranges written from knowledge. O
 - Zhao et al., *Through-Wall Human Pose Estimation Using Radio Signals*, CVPR 2018.
 - Adib et al., *Smart Homes that Monitor Breathing and Heart Rate*, CHI 2015.
 - Geng, Huang & De la Torre, *DensePose From WiFi*, arXiv:2301.00250.
-- A specific WiFi pet-vs-human paper hasn't been verified yet, so treat this as an open gap.
+### Human vs pet (verified sources)
+Earlier drafts treated pet discrimination as an open gap. These results close it for Stage 2:
+
+- Zhu et al., *Who Moved My Cheese? Human and Non-human Motion Recognition with WiFi*, IEEE MASS 2022: one commodity Wi-Fi pair separates moving humans from pets, robot vacuums, and fans through walls at 97.7% accuracy ([Exa](https://exa.ai/library/publication/4xyy1kdx7yp)).
+- Wi-MoID (Zhu et al., IEEE IoT Journal 2023): follow-up with 97.34% accuracy and a 1.75% false-alarm rate, designed for edge devices so it fits the Pi master ([Exa](https://exa.ai/library/publication/3fwfw3jgjcx)).
+- [WiFi Dataset for Motion Source Recognition](https://ieee-dataport.org/documents/wifi-dataset-motion-source-recognition) (IEEE DataPort, DOI 10.21227/g0zs-wd38): public CSI of humans, pets, robots, and fans, so training can start before the hardware exists.
+- PetFree (Lin et al., IEEE IoT Journal 2020): body height from CSI on a single link; 93.7% intrusion detection with pet false alarms down to 6.5% ([Exa](https://exa.ai/library/publication/gffq5hcz2xr)).
+- Ma et al., *An Accurate Method to Distinguish Between Stationary Human and Dog Targets Under Through-Wall Condition Using UWB Radar*, MDPI Remote Sensing 11(21):2571 (2019): stationary humans vs beagles through a wall, ROC AUC 0.9993; relevant to the DW3000 node ([MDPI](https://www.mdpi.com/2072-4292/11/21/2571)).
 
 ## 6. Ethics and legal
 - Sense only spaces you own or have explicit consent for. Through-wall sensing of neighbors or of others without consent may break privacy and wiretap laws.
